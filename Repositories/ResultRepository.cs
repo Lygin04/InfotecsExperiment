@@ -1,3 +1,4 @@
+using System.Linq.Expressions;
 using InfotecsExperiment.Entity;
 using InfotecsExperiment.Repository.Interfaces;
 using Microsoft.EntityFrameworkCore;
@@ -11,6 +12,11 @@ public class ResultRepository : IResultRepository
     public ResultRepository(DataContext context)
     {
         _context = context;
+    }
+    
+    public async Task<List<Result>> WhereAsync(Expression<Func<Result, bool>> where)
+    {
+        return await _context.Results.Where(where).ToListAsync();
     }
 
     public async Task<Result> FindByFileTitleAsync(string title)

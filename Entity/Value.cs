@@ -6,6 +6,6 @@
         public DateTime StartDate { get; set; }
         public int Time { get; set; }
         public double Score { get; set; }
-        public File? File { get; set; }
+        public File File { get; set; }
     }
 }

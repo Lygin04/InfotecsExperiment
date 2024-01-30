@@ -20,7 +20,7 @@ public class FileRepository : IFileRepository
 
     public async Task<File?> GetByNameAsync(string title)
     {
-        return await _context.Files.FirstOrDefaultAsync(file => file != null && file.Name == title);
+        return await _context.Files.FirstOrDefaultAsync(file => file.Name == title);
     }
 
     public async Task<File?> AddAsync(File file)

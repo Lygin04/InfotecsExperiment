@@ -14,6 +14,7 @@
         public double Median { get; set; }
         public double MaxScore { get; set; }
         public double MinScore { get; set; }
+        public double AvgScore { get; set; }
         public int CountExperiment { get; set; }
 
         public int FileId { get; set; }

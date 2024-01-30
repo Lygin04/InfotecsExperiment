@@ -10,7 +10,7 @@ namespace InfotecsExperiment
         {
         }
 
-        public DbSet<File?> Files { get; set; }
+        public DbSet<File> Files { get; set; }
         public DbSet<Result> Results { get; set; }
         public DbSet<Value> Values { get; set; }
     }
